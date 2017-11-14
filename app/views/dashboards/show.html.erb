@@ -1,0 +1,16 @@
+<h1>Dashboards</h1>
+
+<%= form_for @shout do |form| %>
+  <%= form.fields_for :content do |content_form| %>
+  <%= content_form.text_field :body, placeholder: "shout here!", required: true %>
+<% end %>
+
+  <%= form.submit "Shout!" %>
+<% end %>
+<div class="container">
+  <div class="row">
+    <table class="table table-responsive">
+      <%= render @shouts %>
+    </table>
+  </div>
+</div>

@@ -1,0 +1,14 @@
+<tr>
+  <td>
+    <%= link_to shout do %>
+      <%= shout.content.body  %>
+    <% end %>
+  </td>
+  <td>
+    <%= link_to shout.username, shout.user %>
+  </td>
+  <td>
+    <%= time_ago_in_words(shout.created_at) %> ago
+  </td>
+</tr>
+
